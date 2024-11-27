@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Price Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        .header {
+            text-align: center;
+            background-color: #3498db;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 200px;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Diamond Price Prediction</h1>
+    </div>
+    <div class="container">
+        <form action='/predict_price' method="POST">
+            <div>
+                <label for="carat">Diamond weight(carat):</label>
+                <input type="text" id="carat" name="carat" placeholder="Enter weight(carat)">
+            </div>
+            <div>
+                <label for="cut">Diamond cut quality(0-4):</label>
+                <input type="text" id="cut" name="cut" placeholder="Enter cut quality">
+            </div>
+            <div>
+                <label for="color">color(0-6):</label>
+                <input type="text" id="color" name="color" placeholder="Enter color">
+            </div>
+            <div>
+                <label for="temp_min">Clarity(0-7):</label>
+                <input type="text" id="clarity" name="clarity" placeholder="Enter min temperature">
+            </div>
+            <div>
+                <label for="depth">Depth:</label>
+                <input type="text" id="depth" name="depth" placeholder="Enter diamond depth(average)">
+            </div>
+            <div>
+                <label for="table">Table(width):</label>
+                <input type="text" id="table" name="table" placeholder="Enter diamond width of widest point">
+            </div>
+            <div>
+                <label for="x">x(length):</label>
+                <input type="text" id="x" name="x" placeholder="Enter diamond length">
+            </div>
+            <div>
+                <label for="y">y(width):</label>
+                <input type="text" id="y" name="y" placeholder="Enter diamond width">
+            </div>
+            <div>
+                <label for="z">z(depth):</label>
+                <input type="text" id="z" name="z" placeholder="Enter diamond depth">
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit">predict price</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
